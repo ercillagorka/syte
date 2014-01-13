@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   {% block metadescription %}<meta name="description" content="Personal website and blog of Gorka Ercilla. Follow him at @ercillagorka" />{% endblock %}
-  {% block metakeywords %}<meta name="keywords" content="Gorka Ercilla, developer, iOS, Apple, android, python ,django" />{% endblock %}
+  {% block metakeywords %}<meta name="keywords" content="Gorka Ercilla, developer, iOS, Apple, android, python, django" />{% endblock %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block pagetitle %}Gorka[Gorka Ercilla]{% endblock %}</title>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -143,14 +143,15 @@ function woopraReady(tracker) {
 {% endif %}
 
 {% if GOOGLE_ANALYTICS_TRACKING_ID %}
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', '{{GOOGLE_ANALYTICS_TRACKING_ID}}']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '{{GOOGLE_ANALYTICS_TRACKING_ID}}', 'ercillagorka.com');
+ga('send', 'pageview');
+
+
 {% endif %}
 </script>
 </body>
