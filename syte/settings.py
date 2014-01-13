@@ -8,21 +8,22 @@ import django
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('gorka ercilla', 'ercillagorka@gmail.com'),
 )
 MANAGERS = ADMINS
 
 
-TIME_ZONE = 'America/Chicago'
-LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Europe/Madrid'
+LANGUAGE_CODE = 'eu'
 SITE_ID = 1
-USE_I18N = False
-USE_L10N = False
+USE_I18N = True
+USE_L10N = True
 USE_TZ = True
+
 
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'static')
 
